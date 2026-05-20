@@ -436,4 +436,22 @@ span {
         height: 200px;
     }
 
+    .footer {
+        background-color: #111;
+        color: white;
+        text-align: center;
+        padding: 30px 20px;
+        margin-top: 80px;
+    }
+
+    .reserva input,
+    .reserva select,
+    .reserva textarea {
+        color: #111;
+        background-color: white;
+    }
+
+    .reserva label {
+        color: #111;
+    }
 }
