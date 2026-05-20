@@ -171,7 +171,8 @@ span {
 
 .sobre h2,
 .cardapio h2,
-.contato h2 {
+.contato h2,
+.reserva h2 {
     font-size: 56px;
     line-height: 1;
     margin-bottom: 24px;
@@ -240,6 +241,67 @@ span {
     margin-top: 18px;
 }
 
+/* RESERVA */
+
+.reserva {
+    padding: 120px 90px;
+    background-color: var(--bg-primary);
+    text-align: center;
+}
+
+.reserva p {
+    max-width: 600px;
+    margin: 0 auto 32px;
+}
+
+.reserva-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.reserva-form input {
+    border-radius: 12px;
+    background-color: var(--card-bg);
+    padding: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    font-size: 16px;
+}
+
+.reserva-form input:focus {
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 10px rgba(138, 111, 77, 0.25);
+    outline: none;
+    transition: 0.3s;
+}
+
+.reserva-form button {
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+.reserva input {
+    color: #111;
+    background-color: #fff;
+    -webkit-text-fill-color: #111;
+}
+
+.reserva input::placeholder {
+    color: #888;
+    opacity: 1;
+}
+
+.reserva label {
+    display: block;
+    margin: 15px 0 8px;
+    color: #6f6256;
+    font-size: 0.95rem;
+    text-align: left;
+}
+
 /* CONTATO */
 
 .contato {
@@ -254,9 +316,20 @@ span {
     margin: 0 auto 32px;
 }
 
+/* FOOTER */
+
+.footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 80px;
+}
+
 /* RESPONSIVO */
 
 @media (max-width: 768px) {
+
     .header {
         padding: 20px 24px;
         flex-direction: column;
@@ -297,13 +370,15 @@ span {
 
     .sobre,
     .cardapio,
+    .reserva,
     .contato {
         padding: 80px 24px;
     }
 
     .sobre h2,
     .cardapio h2,
-    .contato h2 {
+    .contato h2,
+    .reserva h2 {
         font-size: 42px;
     }
 
@@ -322,6 +397,7 @@ span {
 }
 
 @media (max-width: 480px) {
+
     .nav a {
         font-size: 13px;
     }
@@ -332,7 +408,8 @@ span {
 
     .sobre h2,
     .cardapio h2,
-    .contato h2 {
+    .contato h2,
+    .reserva h2 {
         font-size: 36px;
     }
 
@@ -346,64 +423,8 @@ span {
     }
 }
 
-.reserva{
-    padding: 120px 90px;
-    background-color: #f6f1ea;
-    text-align: center;
-}
-
-.reserva span {
-    font-size: 14px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 20px;
-    display: block;
-}
-
-.reserva h2 {
-    font-family:'Cormorant Garamond', serif;
-    font-size: 52px;
-    color: var(--text-main);
-    margin-bottom: 24px;
-    line-height: 1;
-}
-
-.reserva p {
-    max-width: 600px;
-    margin: 0 auto 32px;
-}
-
-.reserva-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.reserva-form input {
-    border-radius: 12px;
-    background-color: var(--card-bg);
-    padding: 16px;
-    border: 1px solid rgba(0, 0, 0, 0.03);
-    font-size: 16px;
-}
-
-.reserva-form button {
-    margin-top: 10px;
-    cursor: pointer;
-    border: none;
-}
-
-.reserva-form input:focus {
-    border: 2px solid var(--accent);
-    box-shadow: 0 0 10px rgba(138, 111, 77, 0.25);
-    outline: none;
-    transition: 0.3s;
-}
-
 @media (max-width: 900px) and (orientation: landscape) {
+
     .header {
         padding: 16px 32px;
     }
@@ -418,9 +439,11 @@ span {
         font-size: 48px;
     }
 
-    .hero image {
-        width: 420px;
+    .hero-image img {
+        width: 100%;
+        max-width: 420px;
     }
+
     .sobre,
     .cardapio,
     .reserva,
@@ -428,38 +451,11 @@ span {
         padding: 70px 32px;
     }
 
-    .cardapio-grind {
+    .cardapio-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .item-card img {
         height: 200px;
-    }
-
-    .footer {
-        background-color: #111;
-        color: white;
-        text-align: center;
-        padding: 30px 20px;
-        margin-top: 80px;
-    }
-
-    .reserva input {
-        color: #111;
-        background-color: #fff;
-        -webkit-text-fill-color: #111;
-    }
-
-    .reserva input::placeholder {
-        color: #888;
-        opacity: 1;
-    }
-
-    .reserva input[type="date"],
-    .reserva input[type="time"] {
-        color: #111;
-        -webkit-text-fill-color: #111;
-        appearance: none;
-        -webkit-appearance: none;
     }
 }
